@@ -1,0 +1,6 @@
+<div *ngFor="let slider of sliders">
+	<ng-container *ngIf="slider.highTimeline">
+		<h2>{{ slider.header }}</h2>
+		<app-slider [title]="slider.header" [slides]="slider.data"></app-slider>
+	</ng-container>
+</div>

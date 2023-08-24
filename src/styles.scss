@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Rubik,"sans-serif";
+    text-rendering: optimizeSpeed;
+    background-color: #203443;
+}
+
+h1, h2, h5 {
+    letter-spacing: .02em;
+}
+
+h2 {
+    font-size: calc(20px + 16 * ((100vw - 320px)/ 2560));
+    line-height: 22px;
+    font-weight: 300;
+    padding-top: 3px;
+    border-radius: 2px;
+}

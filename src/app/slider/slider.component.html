@@ -1,0 +1,15 @@
+<div class="slider">
+	<div #slidesContainer class="slides-container">
+		<div class="slides" [style.transform]="'translateX(' + (-currentIndex * slideWidth) + 'px)'">
+			<div class="slide" *ngFor="let slide of slides">
+				<ng-container *ngIf="slide.verticalPhotos && slide.verticalPhotos[0]?.photoTypes">
+					<a [href]="slide.canonicalUrl">
+						<img [attr.data-src]="slide.verticalPhotos[0].photoTypes['80'].url" alt="{{ slide.heading }}"/>
+					</a>
+				</ng-container>
+			</div>
+		</div>
+	</div>
+	<button class="slider-prev-arrow" (click)="scrollLeft()">Previous</button>
+	<button class="slider-next-arrow" (click)="scrollRight()">Next</button>
+</div>
